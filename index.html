@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hasan Can Dizdar — Data engineer</title>
-<meta name="description" content="Data engineer. Batch pipelines, warehouse modelling, and regulatory reporting that has to validate before it leaves.">
+<title>Hasan Can Dizdar — Data Engineer</title>
+<meta name="description" content="Data engineer in Istanbul. ETL pipelines, Airflow orchestration, and automated regulatory reporting for Turkish banks.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&display=swap" rel="stylesheet">
@@ -12,82 +12,106 @@
 </head>
 <body>
 
-<a class="skip" href="#work">Skip to work</a>
+<a class="skip" href="#experience">Skip to experience</a>
 
 <header class="masthead">
-  <span class="name">Hasan Can Dizdar</span>
-  <span class="where">Istanbul</span>
+  <div>
+    <h1>Hasan Can Dizdar</h1>
+    <p class="role">Data Engineer · Istanbul</p>
+  </div>
+  <nav class="links">
+    <a href="https://github.com/candizd">GitHub</a>
+    <a href="https://www.linkedin.com/in/hasancandizdar/">LinkedIn</a>
+  </nav>
 </header>
 
 <main>
 
-  <section class="opening">
-    <h1>I build batch pipelines, and the reports at the end of them that have to validate.</h1>
-    <p class="standfirst">
-      Ingestion, orchestration, warehouse modelling — and the part most people
-      skip: the mandatory XML report that a regulator will reject outright if one
-      field is the wrong length. Most of what I have built runs in production and
-      belongs to the clients it was built for, so this page is the part I can
-      hand you.
+  <section class="intro">
+    <p>
+      I build ETL pipelines and the orchestration around them. Most recently that
+      meant moving 40+ Oracle tables into BigQuery, and automating the XML reports
+      Turkish banks are legally required to file with GİB, BDDK, MASAK, PVK and BIK
+      — each one validated against the regulator's schema before it is allowed to
+      leave.
+    </p>
+    <p>
+      That work pulled me toward retrieval: I built a hybrid dense-and-sparse search
+      chatbot over regulatory documents, and went on to certify in AWS generative AI.
+      Most of what I have built belongs to the clients it was built for, so the
+      projects below are the ones I can hand you.
     </p>
   </section>
 
-  <section id="work" aria-labelledby="work-h">
-    <h2 id="work-h">Work</h2>
+  <section id="experience" aria-labelledby="experience-h">
+    <h2 id="experience-h">Experience</h2>
 
     <div class="row">
-      <div class="meta">production</div>
+      <div class="meta">Nov 2024 — Jun 2026</div>
       <div class="body">
-        <h3>Regulatory reporting for a bank</h3>
-        <p>
-          25+ mandatory report types produced on a daily and monthly schedule,
-          each validated against the regulator's XSD before delivery, then routed
-          by institution — file server for one, SFTP with packaging and checksums
-          for another. Every report's state is recorded step by step, so when
-          something fails you can say which report, which step, which hour.
-        </p>
-        <p class="tech">Python · Airflow · SQL Server · FastAPI · Docker</p>
+        <h3>Data Engineer, Infolojik</h3>
+        <ul>
+          <li>
+            Built a Python system that generates the XML reports Turkish financial
+            regulators require, with an XSD parser that constructs templates from the
+            schema itself and maps source data into them.
+          </li>
+          <li>
+            Orchestrated daily, weekly and monthly report runs as Airflow DAGs with
+            dynamic task mapping against MS SQL Server, plus retry handling for runs
+            that fail.
+          </li>
+          <li>
+            Monitored SFTP delivery end to end — status checks, error handling and
+            email notification, so a failed report is noticed rather than discovered.
+          </li>
+          <li>
+            Migrated 40+ Oracle tables into BigQuery with four synchronisation
+            strategies (upsert, truncate-insert, load-tracking, daily snapshot) and
+            chunked extraction through Polars for large membership datasets.
+          </li>
+          <li>
+            Built a Dynamics 365 CRM pipeline over the OData API with OAuth and
+            pagination, loading through staging tables into a SQL Server warehouse.
+          </li>
+          <li>
+            Built a retrieval chatbot for regulatory documents: Qdrant, multilingual
+            sentence-transformers with hybrid dense and sparse retrieval, and the
+            Claude API for answers.
+          </li>
+        </ul>
+        <p class="tech">Python · Airflow · MS SQL Server · Oracle · BigQuery · Polars · Qdrant</p>
       </div>
     </div>
 
     <div class="row">
-      <div class="meta">production</div>
+      <div class="meta">Jul — Oct 2024</div>
       <div class="body">
-        <h3>Analytics pipelines for banking and fitness clients</h3>
-        <p>
-          Daily ETL from operational systems into BigQuery: extraction, state
-          tracking so a failed run resumes instead of restarting, and the
-          modelling downstream that analysts actually query.
-        </p>
-        <p class="tech">BigQuery · Airflow · Prefect · Python</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="meta">now</div>
-      <div class="body">
-        <h3>Moving to AWS</h3>
-        <p>
-          My production experience is GCP. I am porting the same patterns across
-          — Bedrock, RDS, S3 — rather than learning them from a tutorial.
-        </p>
+        <h3>Intern, Infolojik</h3>
+        <ul>
+          <li>
+            Started the XSD-to-XML pipeline that became the regulatory reporting
+            system above.
+          </li>
+          <li>Learned Airflow and wrote the first DAGs for report scheduling.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="open" aria-labelledby="open-h">
-    <h2 id="open-h">Things you can open</h2>
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Projects</h2>
 
     <div class="row">
       <div class="meta">live</div>
       <div class="body">
         <h3><a href="https://candizd.github.io/run-bun/">Run &amp; Bun field dex</a></h3>
         <p>
-          A Pokédex and nuzlocke tracker for a romhack, built from three
-          spreadsheets by a Python generator. No server, no framework, no network
-          at runtime — your run is kept in your own browser and exports to JSON.
+          A Pokédex and nuzlocke tracker for a romhack, generated from three
+          spreadsheets by a Python build script. No server, no framework, no network
+          at runtime — a run is kept in your own browser and exports to JSON.
         </p>
-        <p class="tech"><a href="https://github.com/candizd/run-bun">Source</a></p>
+        <p class="tech">Python · vanilla JS · <a href="https://github.com/candizd/run-bun">Source</a></p>
       </div>
     </div>
 
@@ -96,10 +120,10 @@
       <div class="body">
         <h3>xsdscribe</h3>
         <p>
-          Hand an XSD 2,000 lines long and the question nobody can answer quickly
-          is: what exactly am I required to produce? This reads the schema, explains
-          one subtree in plain language — required or not, what values are legal,
-          how often it repeats — and then builds conforming XML from tabular data.
+          Given a 2,000-line XSD, the question nobody can answer quickly is what
+          exactly you are required to produce. This reads the schema and explains one
+          subtree in plain language — required or not, which values are legal, how
+          often it repeats — then builds conforming XML from tabular data.
         </p>
         <p class="tech">Python · xmlschema · Postgres</p>
       </div>
@@ -111,8 +135,8 @@
         <h3><a href="https://github.com/candizd/ai-coding-agent">AI coding agent</a></h3>
         <p>
           A command-line agent with four file tools, each confined to a working
-          directory. A guided project from boot.dev, rebuilt against OpenRouter —
-          the attribution is in the README, because the architecture is not mine.
+          directory. A guided project from boot.dev, rebuilt against OpenRouter; the
+          attribution is in the README, because the architecture is not mine.
         </p>
         <p class="tech">Python · OpenRouter</p>
       </div>
@@ -122,29 +146,56 @@
       <div class="meta">2023</div>
       <div class="body">
         <h3><a href="https://github.com/candizd/ImageProcessing">Computer vision for TEKNOFEST</a></h3>
-        <p>
-          CNNs, object detection and tracking, worked through for a competition
-          project.
-        </p>
+        <p>CNNs, object detection and tracking, worked through for a competition project.</p>
         <p class="tech">Python · OpenCV</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h">Elsewhere</h2>
-    <div class="row">
-      <div class="meta">code</div>
-      <div class="body">
-        <p><a href="https://github.com/candizd">github.com/candizd</a></p>
-      </div>
-    </div>
+  <section id="skills" aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
 
     <div class="row">
-      <div class="meta">hiring</div>
+      <div class="meta">languages</div>
+      <div class="body"><p>Python · SQL (T-SQL, stored procedures) · JavaScript · HTML/CSS · GDScript</p></div>
+    </div>
+    <div class="row">
+      <div class="meta">data</div>
+      <div class="body"><p>MS SQL Server · Oracle · BigQuery · Airflow · Polars · Pandas · incremental load strategies · data quality and validation</p></div>
+    </div>
+    <div class="row">
+      <div class="meta">cloud, GenAI</div>
+      <div class="body"><p>AWS (Bedrock, SageMaker, Lambda, S3) · foundation models · RAG · vector databases</p></div>
+    </div>
+    <div class="row">
+      <div class="meta">interfaces</div>
+      <div class="body"><p>XML/XSD/JSON · REST · OData · OAuth · SFTP · Git · Docker</p></div>
+    </div>
+    <div class="row">
+      <div class="meta">familiar with</div>
+      <div class="body"><p>Kafka · Spark · Flink · dbt</p></div>
+    </div>
+  </section>
+
+  <section id="background" aria-labelledby="background-h">
+    <h2 id="background-h">Background</h2>
+
+    <div class="row">
+      <div class="meta">2019 — 2025</div>
       <div class="body">
-        <p><a href="https://www.linkedin.com/in/hasancandizdar/">linkedin.com/in/hasancandizdar</a></p>
+        <h3>B.Sc. Computer Science, Turkish-German University</h3>
+        <p>Istanbul. GPA 3.64/4.00.</p>
       </div>
+    </div>
+    <div class="row">
+      <div class="meta">certified</div>
+      <div class="body">
+        <p>AWS Certified Generative AI Developer – Professional · AWS Certified AI Practitioner · TestDaF TDN-4</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="meta">languages</div>
+      <div class="body"><p>Turkish (native) · English (C1) · German (B2)</p></div>
     </div>
   </section>
 
