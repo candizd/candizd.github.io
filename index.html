@@ -1,434 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hasan Can Dizdar — Data engineer</title>
+<meta name="description" content="Data engineer. Batch pipelines, warehouse modelling, and regulatory reporting that has to validate before it leaves.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">Portfolio</a></h1>
-      <a href="index.html" class="logo"><img src="assets/img/icon.png" alt="" class="img-fluid"></a>
+<a class="skip" href="#work">Skip to work</a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Extra</a></li>
-          <li><a class="nav-link scrollto " href="#work">Work</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+<header class="masthead">
+  <span class="name">Hasan Can Dizdar</span>
+  <span class="where">Istanbul</span>
+</header>
 
-    </div>
-  </header><!-- End Header -->
+<main>
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets\img\black-background-1468370534d5s.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h1 class="hero-title mb-4">Hi, I am Hasan Can Dizdar</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Junior Developer"></span></p>
-        </div>
+  <section class="opening">
+    <h1>I build batch pipelines, and the reports at the end of them that have to validate.</h1>
+    <p class="standfirst">
+      Ingestion, orchestration, warehouse modelling — and the part most people
+      skip: the mandatory XML report that a regulator will reject outright if one
+      field is the wrong length. Most of what I have built runs in production and
+      belongs to the clients it was built for, so this page is the part I can
+      hand you.
+    </p>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Work</h2>
+
+    <div class="row">
+      <div class="meta">production</div>
+      <div class="body">
+        <h3>Regulatory reporting for a bank</h3>
+        <p>
+          25+ mandatory report types produced on a daily and monthly schedule,
+          each validated against the regulator's XSD before delivery, then routed
+          by institution — file server for one, SFTP with packaging and checksums
+          for another. Every report's state is recorded step by step, so when
+          something fails you can say which report, which step, which hour.
+        </p>
+        <p class="tech">Python · Airflow · SQL Server · FastAPI · Docker</p>
       </div>
     </div>
-  </div><!-- End Hero Section -->
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/me.png" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Hasan Can Dizdar</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Junior Developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>hasanc.dizdar@gmail.com</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skills</p>
-                    <span>Java</span>
-                    <br  />
-                    <span>SQL</span>
-                    <br />
-                    <span>Python</span>
-                    <br />
-                    <span>Front end development</span>
-                    <br />
-                    <span>C#</span>
-                    <br />
-                    <span>Game Design (Mid)</span>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Disciplined university student with a focused ambition to gain work experience
-                      within the field.
-                      Currently studying computer engineering at Turkish-German University with
-                      predicted grades of 3.6, I have built a sound knowledge of problem solving and
-                      different programming languages learnt through studies and projects. Can get
-                      creative with newly learned subjects. With a passion for the field combined with
-                      workplace skills learnt through various club activities and team experiences, I am
-                      well placed to start a career within field and add value to the industry
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="row">
+      <div class="meta">production</div>
+      <div class="body">
+        <h3>Analytics pipelines for banking and fitness clients</h3>
+        <p>
+          Daily ETL from operational systems into BigQuery: extraction, state
+          tracking so a failed run resumes instead of restarting, and the
+          modelling downstream that analysts actually query.
+        </p>
+        <p class="tech">BigQuery · Airflow · Prefect · Python</p>
       </div>
-    </section><!-- End About Section -->
+    </div>
 
-    <!-- ======= Extra Knowledge Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Extra Knowledge
-              </h3>
-              <p class="subtitle-a">
-                Here is the extra things I know of.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Object oriented programming</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Data Analysis</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Artificial Intelligence</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Machine Learning</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Test Engineering</h2>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="row">
+      <div class="meta">now</div>
+      <div class="body">
+        <h3>Moving to AWS</h3>
+        <p>
+          My production experience is GCP. I am porting the same patterns across
+          — Bedrock, RDS, S3 — rather than learning them from a tutorial.
+        </p>
       </div>
-    </section><!-- End Extra Knowledge Section -->
+    </div>
+  </section>
 
+  <section id="open" aria-labelledby="open-h">
+    <h2 id="open-h">Things you can open</h2>
 
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Portfolio
-              </h3>
-              <p class="subtitle-a">
-                Here are some of my works.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img">
-                  <img src="https://images.prismic.io/leasefetcher/d24f9646-851d-4db2-afc5-4bafc1204958_what-does-car-service-include.jpg?auto=compress,format" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Car service</h2>
-                    <div class="w-more">
-                      <a href="https://github.com/candizd/CarService" target=_blank><span class="w-ctegory">GitHub Link</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img">
-                  <img src="https://dac.digital/wp-content/uploads/2022/05/dac-www-1200x680-optimized.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Artificial Intelligence</h2>
-                    <div class="w-more">
-                      <a href="https://github.com/candizd/Artificial-Intelligence" target=_blank><span class="w-ctegory">GitHub Link</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img">
-                  <img src="https://blog.invgate.com/hubfs/data-visualization-illustration.jpeg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Data Analysis</h2>
-                    <div class="w-more">
-                      <a href="https://github.com/candizd/Data-Analysis-" target=_blank><span class="w-ctegory">GitHub Link</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img">
-                  <img src="https://www.ledger.com/wp-content/uploads/2020/09/10-09_BlogpostThumb.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Game Design</h2>
-                    <div class="w-more">
-                      <a href="https://github.com/candizd/CS50-GameDev" target=_blank><span class="w-ctegory">GitHub Link</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img">
-                  <img src="https://y6b8k9e7.stackpathcdn.com/wp-content/uploads/2022/07/machine-learning.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Machine Learning</h2>
-                    <div class="w-more">
-                      <a href="https://github.com/candizd/Machine-Learning" target=_blank><span class="w-ctegory">GitHub Link</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img">
-                  <img src="https://miro.medium.com/v2/resize:fit:1200/1*orR7zBunlzhhw3mHxAbcUA.jpeg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Web Design</h2>
-                    <div class="w-more">
-                      <a href="https://github.com/candizd/WebDev" target=_blank><span class="w-ctegory">GitHub Link</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <div class="row">
+      <div class="meta">live</div>
+      <div class="body">
+        <h3><a href="https://candizd.github.io/run-bun/">Run &amp; Bun field dex</a></h3>
+        <p>
+          A Pokédex and nuzlocke tracker for a romhack, built from three
+          spreadsheets by a Python generator. No server, no framework, no network
+          at runtime — your run is kept in your own browser and exports to JSON.
+        </p>
+        <p class="tech"><a href="https://github.com/candizd/run-bun">Source</a></p>
       </div>
-    </section><!-- End Portfolio Section -->
+    </div>
 
-    <!-- ======= Contact Section ======= -->
+    <div class="row">
+      <div class="meta">in progress</div>
+      <div class="body">
+        <h3>xsdscribe</h3>
+        <p>
+          Hand an XSD 2,000 lines long and the question nobody can answer quickly
+          is: what exactly am I required to produce? This reads the schema, explains
+          one subtree in plain language — required or not, what values are legal,
+          how often it repeats — and then builds conforming XML from tabular data.
+        </p>
+        <p class="tech">Python · xmlschema · Postgres</p>
+      </div>
+    </div>
 
-      <section id="contact" class="portfolio-mf sect-pt4 route">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="title-box text-center">
-                <h3 class="title-a">
-                  Contact me
-                </h3>
-                <p class="subtitle-a">
-                  Here are the few options to contact me.
-                </p>
-                <div class="line-mf"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="work-box">
-                  <div class="work-img">
-                    <img src="https://avatars.githubusercontent.com/u/102000288" alt="" class="card-img-top">
-                  </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title"><a href="https://github.com/candizd" target=_blank><span class="w-ctegory">GitHub</span></a></h2>
-                      <div class="w-more">
-                        <span class="sub-title">You can find some of my works here.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="work-box">
-                  <div class="work-img">
-                    <img src="https://avatars.githubusercontent.com/u/102000288" alt="" class="card-img-top">
-                  </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title"><a href="https://www.linkedin.com/in/hasan-can-dizdar-755155255/" target=_blank><span class="w-ctegory">LinkedIn</span></a></h2>
-                      <div class="w-more">
-                        <span class="sub-title">Here is my LinkedIn.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="work-box">
-                  <div class="work-img">
-                    <img src="https://img.freepik.com/free-vector/chess-game-concept-with-realistic-board-black-white-pieces_1284-13711.jpg?w=2000" alt="" class="card-img-top">
-                  </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title"><a href="https://lichess.org/@/elmuhsin" target=_blank><span class="w-ctegory">Lichess</span></a></h2>
-                      <div class="w-more">
-                        <span class="sub-title">Want to play some chess?</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="row">
+      <div class="meta">2026</div>
+      <div class="body">
+        <h3><a href="https://github.com/candizd/ai-coding-agent">AI coding agent</a></h3>
+        <p>
+          A command-line agent with four file tools, each confined to a working
+          directory. A guided project from boot.dev, rebuilt against OpenRouter —
+          the attribution is in the README, because the architecture is not mine.
+        </p>
+        <p class="tech">Python · OpenRouter</p>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="meta">2023</div>
+      <div class="body">
+        <h3><a href="https://github.com/candizd/ImageProcessing">Computer vision for TEKNOFEST</a></h3>
+        <p>
+          CNNs, object detection and tracking, worked through for a competition
+          project.
+        </p>
+        <p class="tech">Python · OpenCV</p>
+      </div>
+    </div>
+  </section>
 
-          </div>
-        </div>
-      </section><!-- End Contact Section -->
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Elsewhere</h2>
+    <div class="row">
+      <div class="meta">code</div>
+      <div class="body">
+        <p><a href="https://github.com/candizd">github.com/candizd</a></p>
+      </div>
+    </div>
 
-  </main><!-- End #main -->
+    <div class="row">
+      <div class="meta">hiring</div>
+      <div class="body">
+        <p><a href="https://www.linkedin.com/in/hasancandizdar/">linkedin.com/in/hasancandizdar</a></p>
+      </div>
+    </div>
+  </section>
 
+</main>
 
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<footer>
+  <p>Built by hand. No framework, no analytics.</p>
+</footer>
 
 </body>
-
 </html>

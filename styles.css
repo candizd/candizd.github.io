@@ -1,0 +1,189 @@
+/* Ledger-paper ground, official-ink accent. Deliberately not the cream/serif/
+   terracotta or black/acid-green pairs every generated portfolio arrives in. */
+:root {
+  --ground: #e9ebe4;
+  --raised: #f2f3ee;
+  --ink: #15181b;
+  --muted: #5e655f;
+  --rule: #c6cabe;
+  --stamp: #3a3c8f;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #15181b;
+    --raised: #1c2024;
+    --ink: #e6e8e1;
+    --muted: #949b94;
+    --rule: #333a36;
+    --stamp: #9a9cf0;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  padding:
+    env(safe-area-inset-top, 0px)
+    max(1.5rem, env(safe-area-inset-right, 0px))
+    env(safe-area-inset-bottom, 0px)
+    max(1.5rem, env(safe-area-inset-left, 0px));
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  background: var(--raised);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--stamp);
+}
+
+a {
+  color: var(--stamp);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible {
+  outline: 2px solid var(--stamp);
+  outline-offset: 3px;
+}
+
+.masthead,
+main,
+footer {
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+/* ---- masthead ------------------------------------------------------ */
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 2rem 0;
+  font-size: 0.875rem;
+}
+.masthead .name { font-weight: 600; }
+.masthead .where { color: var(--muted); }
+
+/* ---- opening ------------------------------------------------------- */
+
+.opening { padding-block: 4.5rem 3.5rem; }
+
+/* The one loud element on the page: Archivo pushed wide on its width axis.
+   Contrast comes from that axis rather than a second typeface. */
+.opening h1 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(2.05rem, 5.6vw, 4.1rem);
+  font-weight: 600;
+  font-stretch: 118%;
+  line-height: 1.03;
+  letter-spacing: -0.021em;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+.standfirst {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 1.0625rem;
+  color: var(--muted);
+}
+
+/* ---- sections ------------------------------------------------------ */
+
+section + section { margin-top: 3.25rem; }
+
+section h2 {
+  margin: 0 0 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Narrow column carries real status, not a decorative label: whether a thing
+   is live, shipped, or still being written. */
+.row {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 0 2.5rem;
+  border-top: 1px solid var(--rule);
+  padding-block: 1.5rem;
+}
+
+.meta {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  padding-top: 0.3rem;
+}
+
+.body > :first-child { margin-top: 0; }
+.body > :last-child { margin-bottom: 0; }
+
+.body h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  font-stretch: 105%;
+  letter-spacing: -0.009em;
+}
+.body h3 a { color: inherit; }
+
+.body p {
+  margin: 0 0 0.75rem;
+  max-width: 62ch;
+}
+
+.tech {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* ---- footer -------------------------------------------------------- */
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 3.25rem;
+  padding-block: 1.5rem 3rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+footer p { margin: 0; }
+
+/* ---- narrow screens ------------------------------------------------ */
+
+@media (max-width: 46rem) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding-block: 1.35rem;
+  }
+  .meta { padding-top: 0; }
+  .opening { padding-block: 3rem 2.5rem; }
+  .opening h1 { max-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
